@@ -9,7 +9,7 @@ provides a REST API to provide ethereum gas prices stored in a DynamoDB. A local
 plugin.
 
 
-Test your service locally, without having to deploy it first.
+Test your service locally, without having to deploy it first. When you are satisfied with your testing, the lambda function and API gateway can be deployed with a single command.
 
 ## Setup
 First install the local dependencies and then kick off the local api and database server.
