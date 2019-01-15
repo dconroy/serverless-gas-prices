@@ -33,6 +33,7 @@ async function writeDB(r) {
   var params = {
     TableName: 'EtherGasPrice',
     Item: {
+      network: 'mainnet',
       timestamp: timestamp,
       'fast': r.fast,
       'safeLowWait': r.safeLowWait,

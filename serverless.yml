@@ -60,11 +60,11 @@ resources:
           WriteCapacityUnits: 1
         AttributeDefinitions:
           -
-            AttributeName: "timestamp"
-            AttributeType: "N"
+            AttributeName: "network"
+            AttributeType: "S"
         KeySchema:
           -
-            AttributeName: "timestamp"
+            AttributeName: "network"
             KeyType: "HASH"
 
 

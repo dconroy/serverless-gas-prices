@@ -5,8 +5,8 @@ const dynamodb = require('./dynamodb');
 module.exports.get = (event, context, callback) => {
   const params = {
     TableName: process.env.DYNAMODB_TABLE,
-    Limit: 1,
-    ScanIndexForward: false,
+    // Limit: 1,
+
   };
 
   // fetch all todos from the database
