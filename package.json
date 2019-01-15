@@ -16,7 +16,7 @@
   "author": "Dave Conroy",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ConsenSys/pangea-backend.git"
+    "url": "git+https://github.com/dconroy/serverless-gas-prices"
   },
   "license": "ISC",
   "devDependencies": {
