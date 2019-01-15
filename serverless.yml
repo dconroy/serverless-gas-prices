@@ -1,0 +1,69 @@
+
+service: EthGasPrice 
+
+plugins:
+  - serverless-dynamodb-local
+  - serverless-offline
+  - serverless-dotenv-plugin
+
+custom:
+  dynamodb:
+    start:
+      port: 8000
+      inMemory: true
+      migrate: true
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  region: us-east-1
+  profile: eth
+
+
+  iamRoleStatements:
+    - Effect: "Allow"
+      Action:
+        - "dynamodb:PutItem"
+      Resource: !GetAtt DynamoDBTable.Arn
+
+ 
+functions:
+  getGasPrice:
+    name: EthGasPrice
+    handler: handler.updatePrice
+    events:
+      - schedule: rate(1 minute)
+
+  get:
+    handler: getPrice.get
+    events:
+      - http:
+          path: gas
+          method: get
+          cors: true
+   
+
+resources:
+  Resources:
+    DynamoDBTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: "EtherGasPrice"
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
+        AttributeDefinitions:
+          -
+            AttributeName: "timestamp"
+            AttributeType: "N"
+        KeySchema:
+          -
+            AttributeName: "timestamp"
+            KeyType: "HASH"
+
+
+
+
+
+
+

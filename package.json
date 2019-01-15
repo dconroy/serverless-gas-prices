@@ -1,0 +1,26 @@
+{
+  "name": "lambda-gas-price",
+  "version": "1.0.0",
+  "description": "Fetch gas prices from eth gas station",
+  "main": "handler.js",
+  "scripts": {
+    "invoke": "NODE_ENV=production sls invoke --function getGasPrice",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "NODE_ENV=production sls deploy",
+    "update": "NODE_ENV=production sls deploy function --function getGasPrice",
+    "offline":"serverless offline start",
+    "local":"sls invoke local --function getGasPrice"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "aws-sdk": "^2.371.0",
+    "serverless-dotenv-plugin": "^2.0.1"
+  },
+  "dependencies": {
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.5",
+    "serverless-dynamodb-local": "^0.2.30",
+    "serverless-offline": "^4.0.0"
+  }
+}
