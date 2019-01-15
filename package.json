@@ -4,6 +4,7 @@
   "description": "Fetch gas prices from eth gas station",
   "main": "handler.js",
   "scripts": {
+    "logs" : "NODE_ENV=production serverless logs -f getGasPrice -t",
     "invoke": "NODE_ENV=production sls invoke --function getGasPrice",
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "NODE_ENV=production sls deploy",

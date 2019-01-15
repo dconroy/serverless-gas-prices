@@ -24,6 +24,12 @@ provider:
     - Effect: "Allow"
       Action:
         - "dynamodb:PutItem"
+        - dynamodb:Query
+        - dynamodb:Scan
+        - dynamodb:GetItem
+        - dynamodb:PutItem
+        - dynamodb:UpdateItem
+        - dynamodb:DeleteItem
       Resource: !GetAtt DynamoDBTable.Arn
 
  
