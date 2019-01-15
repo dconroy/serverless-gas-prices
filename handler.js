@@ -2,7 +2,7 @@
 
 const URI = 'https://ethgasstation.info/json/ethgasAPI.json'
 const rp = require('request-promise-native')
-const dynamodb = require('./dynamodb');
+const dynamodb = require('./infrastructure/dynamodb');
 
 module.exports.updatePrice = async (event, context, callback) => {
 

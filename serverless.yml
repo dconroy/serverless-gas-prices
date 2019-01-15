@@ -17,7 +17,7 @@ provider:
   name: aws
   runtime: nodejs8.10
   region: us-east-1
-  profile: eth
+  profile: gas
 
 
   iamRoleStatements:
@@ -41,14 +41,13 @@ functions:
       - schedule: rate(1 minute)
 
   get:
-    handler: getPrice.get
+    handler: gas/getCosts.get
     events:
       - http:
           path: gas
           method: get
           cors: true
    
-
 resources:
   Resources:
     DynamoDBTable:

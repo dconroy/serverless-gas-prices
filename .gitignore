@@ -9,8 +9,3 @@ remove.sh
 
 #IDE
 .vscode
-
-
-.env
-.env.development
-.env.production

@@ -1,6 +1,6 @@
 'use strict';
 
-const dynamodb = require('./dynamodb');
+const dynamodb = require('../infrastructure/dynamodb');
 
 module.exports.get = (event, context, callback) => {
   const params = {

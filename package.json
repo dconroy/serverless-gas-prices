@@ -4,15 +4,20 @@
   "description": "Fetch gas prices from eth gas station",
   "main": "handler.js",
   "scripts": {
-    "logs" : "NODE_ENV=production serverless logs -f getGasPrice -t",
+    "destroy": "NODE_ENV=production sls remove",
+    "logs": "NODE_ENV=production serverless logs -f getGasPrice -t",
     "invoke": "NODE_ENV=production sls invoke --function getGasPrice",
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "NODE_ENV=production sls deploy",
     "update": "NODE_ENV=production sls deploy function --function getGasPrice",
-    "offline":"serverless offline start",
-    "local":"sls invoke local --function getGasPrice"
+    "offline": "serverless offline start",
+    "local": "sls invoke local --function getGasPrice"
   },
-  "author": "",
+  "author": "Dave Conroy",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ConsenSys/pangea-backend.git"
+  },
   "license": "ISC",
   "devDependencies": {
     "aws-sdk": "^2.371.0",
@@ -21,7 +26,7 @@
   "dependencies": {
     "request": "^2.88.0",
     "request-promise-native": "^1.0.5",
-    "serverless-dynamodb-local": "^0.2.30",
+    "serverless-dynamodb-local": "0.2.30",
     "serverless-offline": "^4.0.0"
   }
 }
