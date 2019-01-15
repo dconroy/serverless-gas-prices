@@ -49,5 +49,5 @@ npm run invoke
 ## Cleanup
 When done testing, if you'd like to tear down everything, simple run:
 ```bash
-npm run invoke 
+npm run destroy 
 ```
