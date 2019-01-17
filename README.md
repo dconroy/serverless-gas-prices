@@ -1,6 +1,6 @@
 
 # Gas price service
-Serverless lamba to continously fetch gas prices and store in dynamoDB, as well as providing a REST API for access and offline support.
+Serverless lambda function that continuously fetches recommended gas prices from EthGasStation and stores then in a dynamoDB table, as well as providing a REST API for easy access and offline support.
 
 This example demonstrates how to run a service locally, using the
 [serverless-offline](https://github.com/dherault/serverless-offline) plugin. It
